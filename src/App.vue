@@ -1,28 +1,39 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="d-flex flex-column h-100">
+    <div class="content">
+      <Search msg="Welcome to Your Vue.js App"/>
+      <Pagination/>
+      <table-search></table-search>
+    </div>
+    <Footer/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Search from './components/Search.vue';
+import TableSearch from './components/TableSearch';
+import Pagination from './components/Pagination';
+import Footer from './components/Footer';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Search,
+    TableSearch,
+    Pagination,
+    Footer
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+  html, body {
+    height:100%
+  }
+  .content {
+    flex: 1 0 auto;
+  }
+  .footer {
+    flex: 0 0 auto;
+  }
 </style>
+

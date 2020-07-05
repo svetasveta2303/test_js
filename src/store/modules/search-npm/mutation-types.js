@@ -1,0 +1,3 @@
+export const SEARCH = 'SEARCH';
+export const CHANGE_PAGINATION = 'CHANGE_PAGINATION';
+export const SET_DETAILS = 'SET_DETAILS';
